@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSecurity</title>
+    <link rel = "icon" href = "https://www.pngall.com/wp-content/uploads/4/Cyber-Security-Logo-PNG.png" type = "image/x-icon">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body style="background-color: #00385e">
+    <!-- Top navigation -->
+<div class="topnav">
+
+    <!-- Centered link -->
+    <div class="topnav-centered">
+      <a href="#home" class="active">Cybersecurity News</a>
+    </div>
+  
+    <!-- Left-aligned links (default) -->
+    <a href="/news.html">All News</a>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Websites</a>
+        <div class="dropdown-content">
+        <a href="/news/thehackernews.html">Thehackernews</a>
+        <a href="/news/cyberwire.html">cyberwire</a>
+        <a href="/news/nytimes.html">Nytimes</a>
+        <a href="/news/france24.html">France24</a>
+        <a href="/news/cnbc.html">Cnbc</a>
+        <a href="/news/channelnewsasia.html">Chanelnewsasia</a>
+        </div>
+    </li>
+    <button type="button" class="buttonLogin" id="btnModalLogin">
+        Login
+    </button>
+
+    <button type="button" class="buttonRegistar" id="btnModalRegistar">
+        Sign Up
+    </button>
+
+    <button type="button" class="buttonLogOff" id="btnLogoff">
+        Log Out
+    </button>
+
+    <div class="modal fade" id="modalRegistar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-bs-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    Register New User
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label" style="color: white;">E-Mail</label>
+                    <input type="email" class="form-control" id="usernameRegistar" name="usernameRegistar"
+                        placeholder="E-Mail" />
+                    <p id="emailErroLoginRegistar"></p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" style="color: white;">Password</label>
+                    <input type="password" class="form-control" id="senhaRegistar" name="senhaRegistar"
+                        placeholder="Senha" />
+                    <p id="statusRegistar" style="color: white;"></p>
+                </div>
+                <div class="modal-footer d-block">
+                    <button id="btnCancelaRegistar" class="buttonCancelar" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button class="buttonSubmeter" id="btnSubmitRegistar" onclick="validaRegisto()">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para fazer login -->
+<!-- se retirar o data-bs-backdrop, o modal desaparece ao clicar no fundo da página -->
+<div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-bs-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    Insert Your Credentials
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    id="btnLoginClose"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label" style="color: white;">E-Mail</label>
+                    <input type="email" class="form-control" id="usernameLogin" name="usernameLogin"
+                        placeholder="E-Mail" />
+                    <p id="emailErroLogin"></p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" style="color: white;">Password</label>
+                    <input type="password" class="form-control" id="senhaLogin" name="senhaLogin"
+                        placeholder="Senha" />
+                    <p id="passErroLogin" style="color: white;"></p>
+                    <p id="statusLogin"></p>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe" />
+                    <label class="form-check-label" for="rememberMe" style="color: white;">Remember-me</label>
+                </div>
+                <div class="modal-footer d-block">
+                    <p id='pRegistar' class="float-start">
+                        <a href="#">Register</a>
+                    </p>
+                    <button class="buttonCancelar" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button class="buttonSubmeter" id="btnSubmitLogin" onclick="validaLogin()">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  </div>
+    
+    <header class="head">
+        <div class="container">
+                <!-- <div class="intro-heading">Cybersecurity News</div> -->
+                <div class="image">
+                <div class = "intro-text">Welcome to my Cybersecurity News API
+                    <div class= "intro-lead-in">Click on the images below to visit their Websites to find all the news you need</div>
+                    <h2><span> </span></h2>
+                </div>
+        </div>    
+    </header>
+    <div class="row">
+        <div class="column1"><a href="/news/thehackernews.html"> <img src="https://i.pinimg.com/favicons/ae9a049ffcac1308652ed96038ef9b186f298cc819695511e5af668c.png?348020615b857ff7bb668acfefd81e30" style="width:300px;height:200px;"></a><br /></div>
+        <div class="column2"><a href="/news/cyberwire.html"> <img src="https://www.ondas.com/wp-content/uploads/2019/08/home_bg_text.png"style="width:320px;height:160px;"> </a><br /></div>
+        <div class="column3"><a href="/news/nytimes.html"> <img src="https://contee.org.br/wp-content/uploads/2018/01/tnt.png"style="width:320px;height:160px;"></a><br /></div>
+    </div>
+    <div class="row">
+        <div class="column1"><a href="/news/france24.html"> <img src="https://cdn.freelogovectors.net/wp-content/uploads/2021/08/france-24-logo-freelogovectors.net_.png" style="width:310px;height:180px;"></a><br /></div>
+        <div class="column2"><a href="/news/cnbc.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CNBC_logo.svg/701px-CNBC_logo.svg.png"style="width:320px;height:180px;"> </a><br /></div>
+        <div class="column3"><a href="/news/channelnewsasia.html"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Channel_NewsAsia_logo_%28shape_only%29.svg/1123px-Channel_NewsAsia_logo_%28shape_only%29.svg.png"style="width:320px;height:180px;"></a><br /></div>
+    </div>
+
+    <div class="wrapper">
+        <div class="content">
+            <p>.</p>
+        </div>
+        <div id="footer">
+            <p>&copy; This is a project for my Web Developer class. The API gets all the news about cybersecurity.</p>
+        </div>
+    </div>
+
+    <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/users.js"></script>
+ 
+</body>
+</html>
